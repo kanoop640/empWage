@@ -58,7 +58,7 @@ totalWage()
 	read  hours
 	dailyWage=$(echo "$day" "$hours" |awk '{print ($2/$1)*20 }')
 	total=$(echo "$hours" |awk '{print $1*20 }')
-	echo "Daily wage is : " $dailyWage "and total wage is : " $total
+	echo "Daily wage is : " $dailyWage "and total wage is : " $total "and days is : " $day
 }
 echo "1. Check Attendence"
 echo "2. Employee Daily Wage "

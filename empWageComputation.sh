@@ -33,7 +33,7 @@ empWageForMonth()
 empWageMonthCondition()
 {
 	read -p "Enter number of hours done in  month " hours
-	if(( $hours<101  && day <21 ))
+	if(( $hours<101 ))
 	then
 		wage=$(echo )
 }

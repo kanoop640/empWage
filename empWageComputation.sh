@@ -37,3 +37,23 @@ empWageMonthCondition()
 	then
 		wage=$(echo )
 }
+echo "1. Check Attendence"
+echo "2. Employee Daily Wage "
+echo "3. Part Time Employee Wage "
+echo "4. Employee Wages for Month "
+echo "5. Employee Wage in month with day or hour "
+echo "Enter your choice "
+read ch
+case $ch in 
+ 1)
+	Attendence ;;
+ 2)
+	empDailyWage ;;
+ 3)
+	partTimeWage ;;
+ 4)
+	empWageForMonth ;;
+ 5)
+	empWageMonthCondition ;;
+ *)
+	echo "Wrong input "

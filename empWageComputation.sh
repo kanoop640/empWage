@@ -10,10 +10,4 @@ Attendence()
 	fi
 	
 }
-empDailyWage()
-{
-read -p "Entre number of hours " hours
-wage=$(echo "$hours" "20" |awk '{print $1*$2}')
- 	echo "Daily wage is : " $wage
-	return $wage
-}
+

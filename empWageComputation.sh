@@ -30,3 +30,10 @@ empWageForMonth()
 	TotalWage=$(echo "$month" "20" |awk '{print $1*$2*8*$2}')
 	echo "Total wage in " $month " month is : " $TotalWage
 }
+empWageMonthCondition()
+{
+	read -p "Enter number of hours done in  month " hours
+	if(( $hours<101 ))
+	then
+		wage=$(echo )
+}

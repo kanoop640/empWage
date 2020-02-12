@@ -43,11 +43,20 @@ empWageMonthCondition()
 		echo "Day and hours is greter than 20 and 100 " 
 	fi
 }
+getWorkHour()
+{
+	echo "Enter total working day and total hours "
+	read day
+	read hours
+	ge=$(echo "$day" "$hours" |awk '{print $2/$1 }')
+	echo "Working hours is " $ge
+}
 echo "1. Check Attendence"
 echo "2. Employee Daily Wage "
 echo "3. Part Time Employee Wage "
 echo "4. Employee Wages for Month "
 echo "5. Employee Wage in month with day or hour "
+echo "6. To get working hours "
 echo "Enter your choice "
 read ch
 case $ch in 
@@ -61,5 +70,9 @@ case $ch in
 	empWageForMonth ;;
  5)
 	empWageMonthCondition ;;
+ 6)
+	getWorkHour ;;
  *)
 	echo "Wrong input "
+esac
+

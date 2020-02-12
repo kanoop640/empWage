@@ -17,3 +17,10 @@ wage=$(echo "$hours" "20" |awk '{print $1*$2}')
  	echo "Daily wage is : " $wage
 	return $wage
 }
+partTimeEmpWage()
+{
+	read -p "Enter number of hours to be done extra " part
+	wage=$(( part*20 ))
+	echo $wage
+	return  $wage
+}

@@ -32,8 +32,15 @@ empWageForMonth()
 }
 empWageMonthCondition()
 {
-	read -p "Enter number of hours done in  month " hours
-	if(( $hours<101 ))
+	read -p "Enter number of hours done and day in month  " hours day
+	if(( $hours<101  || $day < 21 ))
 	then
-		wage=$(echo )
+		wage=$(echo "$hours" |awk '{print $hours*20}')
+		wage1=$(echo "$day" |awk '{print $1*8*20}')
+		echo "Wage for hours is : " $wage
+		echo "Wage for " $day "is : " $wage1
+	else
+		echo "Day and hours is greter than 20 and 100 " 
+	fi
 }
+empWageMonthCondition

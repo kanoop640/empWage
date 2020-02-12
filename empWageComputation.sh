@@ -63,4 +63,3 @@ case $ch in
 	empWageMonthCondition ;;
  *)
 	echo "Wrong input "
->>>>>>> use6

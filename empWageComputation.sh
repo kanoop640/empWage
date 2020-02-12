@@ -24,3 +24,9 @@ partTimeEmpWage()
 	echo $wage
 	return  $wage
 }
+empWageForMonth() 
+{
+	read -p "Enter the number of months in which work is done " month
+	TotalWage=$(echo "$month" "20" |awk '{print $1*$2*8*$2}')
+	echo "Total wage in " $month " month is : " $TotalWage
+}

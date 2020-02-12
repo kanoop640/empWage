@@ -51,22 +51,12 @@ getWorkHour()
 	ge=$(echo "$day" "$hours" |awk '{print $2/$1 }')
 	echo "Working hours is " $ge
 }
-totalWage()
-{
-	echo "How many day you worked and total hours " 
-	read day
-	read  hours
-	dailyWage=$(echo "$day" "$hours" |awk '{print ($2/$1)*20 }')
-	total=$(echo "$hours" |awk '{print $1*20 }')
-	echo "Daily wage is : " $dailyWage "and total wage is : " $total
-}
 echo "1. Check Attendence"
 echo "2. Employee Daily Wage "
 echo "3. Part Time Employee Wage "
 echo "4. Employee Wages for Month "
 echo "5. Employee Wage in month with day or hour "
 echo "6. To get working hours "
-echo "7. Total Wage and Daily wage "
 echo "Enter your choice "
 read ch
 case $ch in 
@@ -82,8 +72,5 @@ case $ch in
 	empWageMonthCondition ;;
  6)
 	getWorkHour ;;
- 7)
-	totalWage ;;
  *)
-	echo "Wrong input "
-esac
+
